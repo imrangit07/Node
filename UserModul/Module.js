@@ -1,12 +1,12 @@
  
 
- const MyName = ()=>{
+ const MyName = ()=>{//Create Moduls
     return "<h1>Imran hussain</h1>";
  }
- const MyAge = ()=>{
+ const MyAge = ()=>{//Create Moduls
     return "<h1>23</h1>";
  }
- const MyContact = ()=>{
+ const MyContact = ()=>{//Create Moduls
     return "<h1>23803840380948</h1>";
  }
 
@@ -14,4 +14,4 @@
   MyName,
   MyAge,
   MyContact
- }
+ } //Expost Moduls
