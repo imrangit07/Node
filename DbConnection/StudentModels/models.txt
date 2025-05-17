@@ -1,0 +1,51 @@
+What are Models in Node.js?
+Models are a core component in backend development (especially in MVC architecture) that:
+
+Represent data structures (e.g., users, products, orders)
+
+Define business logic (data validation, calculations)
+
+Interact with databases (fetching, updating, deleting records)
+
+Key Responsibilities of Models
+Data Structure – Define how data is organized (e.g., a User model has name, email, password).
+
+Database Operations – Handle CRUD (Create, Read, Update, Delete) operations.
+
+Validation – Ensure data correctness (e.g., email format, password strength).
+
+Relationships – Define how models interact (e.g., a Post belongs to a User).
+
+
+
+Why Use Models in Node.js?
+✅ Separation of Concerns – Keeps database logic separate from routes/controllers.
+✅ Reusability – The same model can be used across multiple routes.
+✅ Consistency – Ensures data follows predefined rules (e.g., required fields).
+✅ Security – Sanitizes inputs to prevent SQL injection or invalid data.
+
+Types of Models
+1. Database Models (ORM/ODM)
+Used with libraries like:
+
+Mongoose (for MongoDB)
+
+Sequelize (for SQL databases like MySQL, PostgreSQL)
+
+Prisma (modern ORM for TypeScript/Node.js)
+
+
+
+
+// models/User.js
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now }
+});
+
+// Export the model
+module.exports = mongoose.model('User', userSchema);

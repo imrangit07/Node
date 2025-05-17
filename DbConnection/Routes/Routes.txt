@@ -1,0 +1,54 @@
+Definition
+Routes in Node.js define how an application responds to client requests to particular endpoints (URIs) and specific HTTP request methods (GET, POST, etc.). They are the pathways that determine what code executes when a particular URL is accessed with a specific HTTP method.
+
+Why We Use Routes
+Organization: Routes help structure your application by separating different functionalities
+
+Maintainability: Makes code easier to understand and modify
+
+Scalability: Allows for adding new endpoints without disrupting existing ones
+
+RESTful API Design: Essential for creating RESTful services
+
+Request Handling: Determines how different types of requests are processed
+
+What You Need
+To work with routes in Node.js, you typically need:
+
+A Node.js server (using built-in http module or frameworks like Express)
+
+A router (either built manually or using Express's router)
+
+Request handlers (functions that process requests)
+
+
+
+
+Basic Example (using Express)
+
+const express = require('express');
+const app = express();
+
+// Define routes
+app.get('/', (req, res) => {
+  res.send('Home Page');
+});
+
+app.get('/about', (req, res) => {
+  res.send('About Page');
+});
+
+app.post('/login', (req, res) => {
+  // Handle login logic
+  res.send('Login Successful');
+});
+
+// Route with parameters
+app.get('/users/:userId', (req, res) => {
+  res.send(`User ID: ${req.params.userId}`);
+});
+
+// Start server
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});

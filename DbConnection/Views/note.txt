@@ -1,0 +1,20 @@
+What are Views in Node.js?
+Views (or templates) are dynamic HTML pages that render data from your Node.js server before sending them to the client. They allow you to:
+
+Generate dynamic content (e.g., user profiles, product listings)
+
+Reuse layouts (headers, footers)
+
+Inject server-side data into HTML
+
+Popular View Engines
+Engine	Syntax	File Extension	Key Features
+EJS	<% %>	.ejs	Embedded JS, simple
+Pug	Indentation	.pug	Minimal syntax
+Handlebars	{{ }}	.hbs	Logic-less, mustache-like
+Nunjucks	{% %}	.njk	Powerful templating (from Mozilla)
+How to Install & Set Up Views in Node.js (Express)
+
+
+1. Install a View Engine (Example: EJS)
+npm install ejs  # Install EJS
