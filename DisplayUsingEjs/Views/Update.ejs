@@ -21,6 +21,10 @@
             <th>EmpName</th>
             <th>EmpPosition</th>
             <th>EmpSalary</th>
+            <th>Edite</th>
+            <th>
+                Delete
+            </th>
         </tr>
 
         <% empData.map((key)=>{%>
@@ -36,6 +40,12 @@
                 </td>
                 <td>
                     <%= key.empSalary %>
+                </td>
+                <td>
+                    edit
+                </td>
+                <td>
+                    <a href="/delete?id=<%= key._id%>">delete</a>
                 </td>
             </tr>
             <% })%>

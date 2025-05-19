@@ -28,4 +28,20 @@ const DisplayData =async(req,res)=>{
       res.render("display",{empData})
 }
 
-module.exports = { Home, Insert, SaveData,DisplayData }
+const Update =async (req,res)=>{
+    const empData = await EmpModels.find();
+      console.log(empData);
+      
+      res.render("update",{empData})
+    // res.send("okkkkk")
+}
+const Delete =async (req,res)=>{
+    const {id}=req.query;
+    // console.log(id);
+    await EmpModels.findByIdAndDelete(id)
+
+    const empData = await EmpModels.find();
+
+      res.render("display",{empData})
+}
+module.exports = { Home, Insert, SaveData,DisplayData,Update,Delete }

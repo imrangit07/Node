@@ -8,5 +8,7 @@ route.get("/insert",EmpController.Insert);
 route.get("/display",EmpController.DisplayData);
 
 route.post("/savedata",EmpController.SaveData);
+route.get("/update",EmpController.Update);
+route.get("/delete",EmpController.Delete);
 
 module.exports=route;
