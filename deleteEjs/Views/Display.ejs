@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="\">Home</a>
+        <a href="\insert">Insert</a>
+        <a href="\display">Display</a>
+        <a href="\update">Update</a>
+        <a href="\delete">Delete</a>
+    </header>
+
+    <section>
+        <h1>This is for Display Data</h1>
+
+        <table border="">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Branch</th>
+            </tr>
+
+            <% stuData.map(key=>{%>
+                <tr>
+                    <td><%= key.Name %></td>
+                    <td><%= key.Age %></td>
+                    <td><%= key.Branch %></td>
+                </tr>
+                <% })%>
+        </table>
+
+    </section>
+
+    <footer>
+        <h4>This is Footer Section</h4>
+    </footer>
+</body>
+
+</html>
